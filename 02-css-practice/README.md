@@ -2,6 +2,10 @@
 
 This folder documents my hands-on learning journey with CSS, from basic styling to modern, responsive web layouts.
 
+# Live Demo
+
+[View the Developer Profile Card](https://hima-thanki.github.io/Web-Foundations-Practice/02-css-practice/)
+
 ## Learning Objectives
 
 - Understand CSS syntax, selectors, and specificity.
