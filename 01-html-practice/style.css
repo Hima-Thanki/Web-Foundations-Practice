@@ -115,3 +115,25 @@ h1 {
     border-radius: 8px;
     font-weight: bold;
 }
+/* CSS Grid Practice */
+.grid-practice {
+    margin-top: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    background-color: #f2f5fa;
+    border-radius: 10px;
+}
+
+.grid-item {
+    padding: 25px 10px;
+    text-align: center;
+    background-color: #176b3a;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
