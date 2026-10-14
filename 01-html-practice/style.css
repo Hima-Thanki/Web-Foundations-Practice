@@ -91,3 +91,27 @@ h1 {
 #main-title {
     text-align: center;
 }
+/* Flexbox Practice */
+.flexbox-practice {
+    margin-top: 40px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f2f5fa;
+    border-radius: 10px;
+}
+
+.flex-item {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #155eef;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
