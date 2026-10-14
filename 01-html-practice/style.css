@@ -75,12 +75,16 @@ h1 {
     color: #155eef;
 }
 
-/* Class selector */
+/* CSS Box Model Practice */
 .highlight {
     background-color: #e8f7ee;
     color: #176b3a;
-    padding: 10px;
-    border-radius: 6px;
+
+    padding: 20px;
+    border: 2px solid #176b3a;
+    margin: 30px 0;
+
+    border-radius: 8px;
 }
 
 /* ID selector */
