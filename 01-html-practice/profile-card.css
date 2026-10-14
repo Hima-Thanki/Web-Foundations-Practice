@@ -1,0 +1,118 @@
+
+/* 1. Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: #f2f5fa;
+    font-family: Arial, sans-serif;
+    color: #172033;
+}
+
+/* 2. Profile card */
+.profile-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 35px 28px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(23, 32, 51, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3. Card hover effect */
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(23, 32, 51, 0.14);
+}
+
+/* 4. Text-based avatar */
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #155eef, #176b3a);
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* 5. Name and role */
+.profile-card h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.profile-card h2 {
+    margin: 0 0 18px;
+    color: #155eef;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* 6. Description */
+.profile-description {
+    margin-bottom: 24px;
+    color: #526078;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* 7. Skill badges */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.skills span {
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #edf4ff;
+    color: #155eef;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* 8. GitHub link button */
+.github-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: #155eef;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.github-button:hover {
+    background: #1048bd;
+    transform: translateY(-2px);
+}
+
+/* 9. Mobile adjustments */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 28px 20px;
+    }
+
+    .profile-card h1 {
+        font-size: 24px;
+    }
+}
