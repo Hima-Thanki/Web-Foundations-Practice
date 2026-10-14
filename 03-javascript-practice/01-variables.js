@@ -6,7 +6,8 @@
 
 // 1. Using let
 let name = "Hima";
-let age = 24;
+let age = 20;
+let city = "Dubai";
 
 // 2. Using const
 const country = "India";
@@ -15,6 +16,7 @@ const country = "India";
 console.log("My name is:", name);
 console.log("My age is:", age);
 console.log("My country is:", country);
+console.log("Live in :", city);
 
 // 4. Update a variable declared with let
 age = 25;
