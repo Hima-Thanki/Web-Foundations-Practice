@@ -69,3 +69,21 @@ footer {
         padding: 18px;
     }
 }
+
+/* Element selector */
+h1 {
+    color: #155eef;
+}
+
+/* Class selector */
+.highlight {
+    background-color: #e8f7ee;
+    color: #176b3a;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* ID selector */
+#main-title {
+    text-align: center;
+}
