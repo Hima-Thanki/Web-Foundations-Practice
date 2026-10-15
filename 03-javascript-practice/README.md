@@ -2,6 +2,10 @@
 
 This folder documents my hands-on learning journey with JavaScript, from programming fundamentals to interactive webpages and practical projects.
 
+# Live Demo
+
+[To-Do List project.](https://hima-thanki.github.io/Web-Foundations-Practice/03-javascript-practice/03-todo-list.html)
+
 ## Learning Objectives
 
 - Understand variables and data types.
