@@ -68,3 +68,21 @@ if (marks >= 90) {
     console.log("You need to improve");
 }
 
+
+console.log("--- For Loop ---");
+
+for (let i = 1; i <= 5; i++) {
+    console.log("Number:", i);
+}
+
+
+console.log("--- While Loop ---");
+
+let count = 1;
+
+while (count <= 3) {
+    console.log("Count:", count);
+    count++;
+}
+
+
