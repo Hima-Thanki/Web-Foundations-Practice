@@ -180,3 +180,12 @@ let expensivePrices = prices.filter(function(price) {
 
 console.log("Prices 250 and above:", expensivePrices);
 
+const add2 = (a,b) => a + b;
+console.log(add2(15,5));
+
+const multiply2 = (a,b) => a * b;
+console.log(multiply2(10,3));
+
+const square = (n) => n * n;
+console.log(square(8));
+
