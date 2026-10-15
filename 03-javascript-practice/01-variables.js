@@ -29,3 +29,27 @@ console.log(typeof xyz);
 // 4. Update a variable declared with let
 age = 25;
 console.log("Updated age:", age);
+
+
+console.log("--- JavaScript Operators ---");
+
+// Arithmetic operators
+let a = 20;
+let b = 6;
+
+console.log("Addition:", a + b);
+console.log("Subtraction:", a - b);
+console.log("Multiplication:", a * b);
+console.log("Division:", a / b);
+console.log("Remainder:", a % b);
+
+// Comparison operators
+console.log("Is a greater than b?", a > b);
+console.log("Are a and b equal?", a === b);
+console.log("a is less than or equal to b?", a <= b);
+
+// Logical operators
+console.log("Both conditions true:", a > 5 && b < 5);
+console.log("At least one condition true:", a < 5 || b < 5);
+console.log("Reverse true to false:", !true);
+
