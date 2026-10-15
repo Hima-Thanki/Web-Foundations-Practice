@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f4f7fb;
+        }
+
+        h1 {
+            color: #174ea6;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        input {
+            width: 65%;
+        }
+
+        button {
+            background: #167d69;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+
+    <input id="taskInput" type="text" placeholder="Enter a task">
+    <button id="addButton">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const addButton = document.getElementById("addButton");
+        const taskList = document.getElementById("taskList");
+
+        let tasks = [];
+
+        addButton.addEventListener("click", function() {
+            const task = taskInput.value.trim();
+
+            if (task === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            tasks.push(task);
+
+            const listItem = document.createElement("li");
+            listItem.textContent = task;
+
+            taskList.appendChild(listItem);
+            taskInput.value = "";
+
+            console.log("Tasks:", tasks);
+        });
+    </script>
+</body>
+</html>
