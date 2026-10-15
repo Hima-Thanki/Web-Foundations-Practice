@@ -157,3 +157,26 @@ developer.country = "India";
 console.log("Updated developer:", developer);
 
 
+console.log("--- JavaScript Array Methods ---");
+
+let prices = [100, 200, 300, 400];
+
+// 1. forEach(): perform an action for each item
+prices.forEach(function(price) {
+    console.log("AED ", price);
+});
+
+// 2. map(): create a new array by changing each item
+let discountedPrices = prices.map(function(price) {
+    return price + 10;
+});
+
+console.log("Discounted prices:", discountedPrices);
+
+// 3. filter(): select items matching a condition
+let expensivePrices = prices.filter(function(price) {
+    return price > 300;
+});
+
+console.log("Prices 250 and above:", expensivePrices);
+
