@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Practice</title>
+</head>
+<body>
+    <h1 id="heading">Welcome to JavaScript</h1>
+
+    <p id="message">Click the button to change this message.</p>
+
+    <button id="changeButton">Change Message</button>
+
+    <script>
+        const heading = document.getElementById("heading");
+        const message = document.getElementById("message");
+        const button = document.getElementById("changeButton");
+
+        button.addEventListener("click", function() {
+            heading.textContent = "DOM Manipulation!";
+            message.textContent = "You changed this webpage using JavaScript.";
+            heading.style.color = "green";
+        });
+    </script>
+</body>
+</html>
