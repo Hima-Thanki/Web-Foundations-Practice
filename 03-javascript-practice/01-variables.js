@@ -53,3 +53,18 @@ console.log("Both conditions true:", a > 5 && b < 5);
 console.log("At least one condition true:", a < 5 || b < 5);
 console.log("Reverse true to false:", !true);
 
+
+console.log("--- JavaScript Conditions ---");
+
+let marks = 75;
+
+if (marks >= 90) {
+    console.log("Grade A");
+} else if (marks >= 75) {
+    console.log("Grade B");
+} else if (marks >= 50) {
+    console.log("Grade C");
+} else {
+    console.log("You need to improve");
+}
+
