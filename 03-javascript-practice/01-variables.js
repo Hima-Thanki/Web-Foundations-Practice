@@ -86,3 +86,32 @@ while (count <= 3) {
 }
 
 
+console.log("--- JavaScript Functions ---");
+
+// 1. Create a function
+function greet() {
+    console.log("Hello, Hima!");
+}
+
+// 2. Call the function
+greet();
+greet();
+
+// 3. Function with parameters
+function greetUser(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greetUser("Hima");
+greetUser("xyz");
+
+// 4. Function that returns a value
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 5);
+console.log("Addition result:", result);
+
+
+
