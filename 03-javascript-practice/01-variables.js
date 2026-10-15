@@ -5,9 +5,12 @@
 */
 
 // 1. Using let
-let name = "Hima";
-let age = 20;
+
 let city = "Dubai";
+let name = "Hima";        // String
+let age = 20;             // Number
+let isDeveloper = true;   // Boolean
+let xyz;                 // Undefined
 
 // 2. Using const
 const country = "India";
@@ -17,6 +20,11 @@ console.log("My name is:", name);
 console.log("My age is:", age);
 console.log("My country is:", country);
 console.log("Live in :", city);
+
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof isDeveloper);
+console.log(typeof xyz);
 
 // 4. Update a variable declared with let
 age = 25;
