@@ -117,7 +117,11 @@
         const addButton = document.getElementById("addButton");
         const taskList = document.getElementById("taskList");
 
-        let tasks = [];
+        let tasks = JSON.parse(localStorage.getItem("todoTasks")) || [];
+
+        function saveTasks() {
+            localStorage.setItem("todoTasks", JSON.stringify(tasks));
+        }
 
         function addTask() {
             const taskText = taskInput.value.trim();
@@ -134,6 +138,7 @@
             };
 
             tasks.push(task);
+            saveTasks();
             renderTasks();
 
             taskInput.value = "";
@@ -158,6 +163,7 @@
 
                 checkbox.addEventListener("change", function() {
                     task.completed = checkbox.checked;
+                    saveTasks();
                     renderTasks();
                 });
 
@@ -177,7 +183,7 @@
                     tasks = tasks.filter(function(item) {
                         return item.id !== task.id;
                     });
-
+                    saveTasks();
                     renderTasks();
                 });
 
@@ -196,6 +202,8 @@
                 addTask();
             }
         });
+
+        renderTasks();
     </script>
 </body>
 </html>
