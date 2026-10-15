@@ -189,3 +189,9 @@ console.log(multiply2(10,3));
 const square = (n) => n * n;
 console.log(square(8));
 
+const product = "Laptop";
+const price = 2500;
+const quantity = 2;
+
+console.log(`I bought ${quantity} ${product}(s) for AED ${price} each.
+Total price: AED ${price * quantity}`);
