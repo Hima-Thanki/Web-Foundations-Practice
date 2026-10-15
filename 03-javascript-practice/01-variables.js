@@ -114,4 +114,46 @@ let result = add(10, 5);
 console.log("Addition result:", result);
 
 
+console.log("--- JavaScript Arrays ---");
+
+let skills = ["HTML", "CSS", "JavaScript", "PHP"];
+
+// Display the entire array
+console.log(skills);
+
+// Access individual items (index starts at 0)
+console.log("First skill:", skills[0]);
+console.log("Second skill:", skills[1]);
+
+// Add a new item
+skills.push("React");
+
+// Check the updated array
+console.log("Updated skills:", skills);
+
+// Check the number of items
+console.log("Total skills:", skills.length);
+
+
+console.log("--- JavaScript Objects ---");
+
+let developer = {
+    name: "Hima",
+    age: 20,
+    city: "Dubai",
+    role: "Web Developer"
+};
+
+// Access object properties
+console.log("Name:", developer.name);
+console.log("City:", developer.city);
+
+// Update a property
+developer.role = "Full-Stack Developer";
+
+// Add a property
+developer.country = "India";
+
+console.log("Updated developer:", developer);
+
 
