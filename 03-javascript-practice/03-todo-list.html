@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My To-Do List</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             max-width: 600px;
@@ -14,38 +19,98 @@
             background: #f4f7fb;
         }
 
+        .todo-container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000010;
+        }
+
         h1 {
             color: #174ea6;
         }
 
-        input, button {
-            padding: 10px;
-            margin: 5px 0;
+        .input-area {
+            display: flex;
+            gap: 8px;
         }
 
-        input {
-            width: 65%;
+        input[type="text"] {
+            flex: 1;
+            min-width: 0;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
         }
 
         button {
-            background: #167d69;
-            color: white;
+            padding: 10px 14px;
             border: none;
+            border-radius: 6px;
+            color: white;
             cursor: pointer;
         }
 
+        #addButton {
+            background: #167d69;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
         li {
-            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 12px;
+            padding: 12px;
+            background: #f4f7fb;
+            border-radius: 6px;
+        }
+
+        .task-text {
+            flex: 1;
+            overflow-wrap: anywhere;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        .delete-button {
+            background: #d93636;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin: 10px auto;
+                padding: 12px;
+            }
+
+            .todo-container {
+                padding: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>My To-Do List</h1>
+    <div class="todo-container">
+        <h1>My To-Do List</h1>
 
-    <input id="taskInput" type="text" placeholder="Enter a task">
-    <button id="addButton">Add Task</button>
+        <div class="input-area">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task"
+            >
+            <button id="addButton">Add Task</button>
+        </div>
 
-    <ul id="taskList"></ul>
+        <ul id="taskList"></ul>
+    </div>
 
     <script>
         const taskInput = document.getElementById("taskInput");
@@ -54,23 +119,82 @@
 
         let tasks = [];
 
-        addButton.addEventListener("click", function() {
-            const task = taskInput.value.trim();
+        function addTask() {
+            const taskText = taskInput.value.trim();
 
-            if (task === "") {
+            if (taskText === "") {
                 alert("Please enter a task!");
                 return;
             }
 
+            const task = {
+                id: Date.now() + Math.random(),
+                text: taskText,
+                completed: false
+            };
+
             tasks.push(task);
+            renderTasks();
 
-            const listItem = document.createElement("li");
-            listItem.textContent = task;
-
-            taskList.appendChild(listItem);
             taskInput.value = "";
+            taskInput.focus();
 
             console.log("Tasks:", tasks);
+        }
+
+        function renderTasks() {
+            taskList.innerHTML = "";
+
+            tasks.forEach(function(task) {
+                const listItem = document.createElement("li");
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.checked = task.completed;
+                checkbox.setAttribute(
+                    "aria-label",
+                    "Mark " + task.text + " as completed"
+                );
+
+                checkbox.addEventListener("change", function() {
+                    task.completed = checkbox.checked;
+                    renderTasks();
+                });
+
+                const text = document.createElement("span");
+                text.className = "task-text";
+                text.textContent = task.text;
+
+                if (task.completed) {
+                    text.classList.add("completed");
+                }
+
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.className = "delete-button";
+
+                deleteButton.addEventListener("click", function() {
+                    tasks = tasks.filter(function(item) {
+                        return item.id !== task.id;
+                    });
+
+                    renderTasks();
+                });
+
+                listItem.appendChild(checkbox);
+                listItem.appendChild(text);
+                listItem.appendChild(deleteButton);
+
+                taskList.appendChild(listItem);
+            });
+        }
+
+        addButton.addEventListener("click", addTask);
+
+        taskInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
         });
     </script>
 </body>
