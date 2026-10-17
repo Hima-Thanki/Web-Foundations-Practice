@@ -214,7 +214,13 @@ const developer = {
 const{name,role,experience} = developer;
 console.log(`Name ${name} ,Role ${role},Experience ${experience}`);
 
+// Spread operator (...)
 
+const frontend = ["HTML", "CSS"];
+
+const fullStack = [...frontend, "JavaScript", "PHP"];
+
+console.log(fullStack);
 
 
 
