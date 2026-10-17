@@ -195,3 +195,51 @@ const quantity = 2;
 
 console.log(`I bought ${quantity} ${product}(s) for AED ${price} each.
 Total price: AED ${price * quantity}`);
+
+// Task A - Array destructuring
+
+const skills = ["HTML","CSS","JavaScript"];
+
+const[firstSkill,secondSkill,thirdSkill] = skills;
+console.log(`First skill: ${firstSkill} ,Second skill ${secondSkill}`);
+
+// Task B - Object destructuring
+
+const developer = {
+  name : "Hima",
+  role : "Web Developer",
+  experience : 3
+};
+
+const{name,role,experience} = developer;
+console.log(`Name ${name} ,Role ${role},Experience ${experience}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
