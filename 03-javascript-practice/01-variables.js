@@ -6,8 +6,8 @@
 
 // 1. Using let
 
-let city = "Dubai";
-let name = "Hima";        // String
+let city = "USA";
+let name = "Dina";        // String
 let age = 20;             // Number
 let isDeveloper = true;   // Boolean
 let xyz;                 // Undefined
